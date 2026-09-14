@@ -1,0 +1,93 @@
+/* Image reliability layer: preserve original proportions and show an explicit state when an asset fails. */
+.headshot {
+  aspect-ratio: auto;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.project-card-media {
+  min-height: 0;
+  padding: 12px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.project-hero-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.image-gallery img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.image-fallback {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 180px;
+  padding: 24px;
+  background: #eef0ec;
+  border: 1px dashed #aeb7b1;
+  border-radius: 10px;
+  color: #45524c;
+  text-align: center;
+  box-shadow: none;
+}
+
+.image-fallback strong {
+  font-size: .92rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.image-fallback span {
+  max-width: 36ch;
+  color: #6a746f;
+  font-size: .88rem;
+  line-height: 1.4;
+}
+
+.project-card-media .image-fallback {
+  min-height: 210px;
+}
+
+.project-hero-image.image-fallback {
+  width: 100%;
+  min-height: 280px;
+  margin-bottom: 38px;
+}
+
+.image-gallery .image-fallback {
+  min-height: 180px;
+}
+
+.headshot.image-fallback {
+  width: 172px;
+  min-height: 172px;
+  padding: 14px;
+}
+
+@media (max-width: 760px) {
+  .headshot.image-fallback { width: 132px; min-height: 132px; }
+  .project-card-media .image-fallback { min-height: 170px; }
+  .project-hero-image.image-fallback { min-height: 210px; }
+}
