@@ -1,66 +1,45 @@
 # Portfolio Verification Backlog
 
-This file contains claims, dates, counts, ownership wording, and document-link questions that should be verified before they are promoted into the polished portfolio narrative.
+This file records decisions made during the portfolio rebuild and the few remaining items that still require external verification before the separate draft is promoted to the live root portfolio.
 
-## 1. Rocketversity scope inconsistency
+## Resolved decisions
 
-The PDF report states that the LMS transformed materials from **15+ organizational divisions**, while another section states that governance involved **more than 30 organizational divisions**. Please verify whether:
+- **Rocketversity scope:** use **15+ divisions**.
+- **THRIVE OpenSRP geographic scope:** use **16 districts**.
+- **Legacy Engineering Management curriculum:** use **2014–2018**.
+- **Curriculum authorship:** use **Lead Curriculum Architect**, working within institutional review and governance rather than “Solo Curriculum Writer.”
+- **Astra LPS Lab:** public wording may state that Devis **led program oversight and co-drafted the MoU with PT Astra International**.
+- **Internship historical result:** **93% of 29 students in the 2017 cohort achieved an A grade** is confirmed. It is kept as a historical program result and not attributed to the later coordination period.
+- **Internship coordination period:** **2018–2023**.
+- **THRIVE public role:** **Project Manager**.
+- **New EM Curriculum:** **Lead Curriculum Architect + Program Coordinator**.
+- **EM Curriculum Evaluation:** **Program Coordinator + Curriculum Review Lead**.
+- **Pre-Master with University of Amsterdam:** **Program Coordinator**.
+- **Workshop on Logistics Competencies:** **Curriculum / Research Contributor**.
+- **UGRAD Exchange:** **Student Advisor / Mentor**.
+- **EM Accreditation:** **Program Lead / Coordinator for Accreditation**. Do not publish an accreditation grade/result.
+- **Capstone:** **Lecturer / Supervisor**.
+- **Entrepreneurship Course:** **Lecturer + Curriculum / Course Designer**.
+- **Engineering Management Manual:** **Lead Author**.
+- **THRIVE impact:** include **120,000+ beneficiaries**.
+- **Astra technical detail:** retain the 150–200 m² modular facility, under-90-minute reconfiguration, real-time operational analytics, and six practical learning modules.
+- **Public email:** **devis.saputra@gmail.com**.
+- **Project layout:** image on top, title, role woven into the first paragraph, 3–4 paragraph case-study summary, then OTHER only when an existing PDF report is shown for that project.
+- **OTHER:** separate 3–4 paragraph PDF summary + PDF link + additional existing images when available.
+- **Images:** preserve the existing Google Site visuals, reduce their displayed dimensions, request Google-hosted resized variants around 800 px, and avoid replacing them with new artwork.
+- **Design:** professional academic/editorial styling, approximately 820 px reading width, Source Serif-style headings, Source Sans-style body text, soft off-white background, restrained green accent.
+- **Navigation:** Home · About · Projects · Contact.
+- **Project cards:** image + project title only. Two columns on desktop, one on mobile.
+- **Project ordering:** strongest work first, beginning with Rocketversity, THRIVE OpenSRP, Astra LPS Lab, New EM Curriculum, and Internship Program.
+- **Contact page:** email, LinkedIn, GitHub, and CV link.
 
-- 15+ refers to divisions with converted learning content and 30+ refers to all collaborating organizational units, or
-- one of the figures should be corrected.
+## Remaining checks
 
-## 2. THRIVE OpenSRP geographic scope inconsistency
+### 1. Public Google Drive permissions
+The PDF report links and CV are stored in Google Drive. The connected account can read them, but anonymous access should be verified before the draft becomes the primary public portfolio. The CV currently requires Google authentication when checked from an unauthenticated browser.
 
-The current Google Sites copy describes deployment across **five districts** and more than 200 health-worker users, while the PDF case study states a team operating across **16 districts**. Please verify the exact scope and whether these numbers refer to different implementation phases.
+### 2. Additional canonical reports
+The rebuild only adds an OTHER section where a strong report is already confidently matched. If more canonical PDFs are later confirmed for EM Manual, Entrepreneurship, Curriculum Evaluation, Pre-Master, Logistics Workshop, UGRAD, Accreditation, or Capstone, they can be added without changing the page structure.
 
-## 3. Engineering Management curriculum year labels
-
-The Google Sites page is titled **Curriculum 2014-2019 of Engineering Management Evaluation** but its description refers to evaluation of the **2014–2018** curriculum. The later handbook is framed around a **2019–2024** target curriculum. Please confirm the official naming and effective years for each curriculum version.
-
-## 4. Curriculum authorship wording
-
-The curriculum handbook uses very strong wording including **“Solo Curriculum Writer”** and states full standalone authorship of the 10-step framework. Please verify whether this wording accurately reflects institutional authorship and whether collaborators, committees, senate members, or co-authors should be credited.
-
-## 5. Astra Lean Production System Lab leadership wording
-
-The establishment report states that Devis provided critical leadership, project oversight, VIP coordination, co-led the official inspection, and contributed to drafting the MoU. Please confirm which of these responsibilities should appear publicly and whether any should be softened to better reflect shared institutional ownership.
-
-## 6. Internship outcome metric
-
-The internship retrospective states that **93% of 29 students in the 2017 cohort achieved an A grade**. This should be confirmed against original academic records before being used as a headline metric.
-
-## 7. Internship duration and 7-year retrospective
-
-The report describes seven years of coordination and also references expansion during COVID-19 and later program changes. Please confirm the exact years Devis personally coordinated the program so the timeline can be displayed accurately.
-
-## 8. THRIVE role title
-
-The PDF case study states **Program Manager through 2015**. Please confirm whether this is the preferred public title for the portfolio and whether the formal employer/organization name should also be shown.
-
-## 9. Additional Google Sites pages still needing report matching
-
-The following pages exist in the Google Site navigation but have not yet been matched confidently to a single final PDF report for the OTHER section:
-
-- Engineering Management Manual
-- Entrepreneurship Course
-- EM Curriculum Evaluation
-- New EM Curriculum
-- Pre-Master with University of Amsterdam
-- Workshop on the Role of Logistic Competencies
-- UGRAD Exchange Program
-- EM Accreditation
-- Capstone
-
-Where multiple source documents exist, please identify which PDF should be treated as the canonical public report.
-
-## 10. Report sharing permissions
-
-The draft currently links to Google Drive PDF URLs found in the connected Drive. Before publishing publicly, confirm that each linked report is shared with **Anyone with the link can view** or otherwise intentionally public.
-
-## 11. Public contact details
-
-The rebuild currently links to LinkedIn and GitHub but intentionally does not publish an email address. Confirm whether an email address should be visible on the final site.
-
-## 12. Live-site publishing decision
-
-The rebuild is being developed in the separate repository `devissaputra/devissaputra`. The live repository `devissaputra/devissaputra.github.io` should remain untouched until the draft is reviewed and explicitly approved for publishing.
+### 3. Live root-site publishing
+The rebuilt site remains in the separate repository `devissaputra/devissaputra`. The live root repository `devissaputra/devissaputra.github.io` remains untouched unless Devis explicitly approves replacing or merging the live portfolio later.
