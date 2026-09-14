@@ -6,7 +6,13 @@ const localProjectImages = {
   },
   "thrive-opensrp": {
     main: "thrive-opensrp-main.jpg",
-    supporting: ["thrive-opensrp-phone.jpg"]
+    supporting: [
+      "thrive-opensrp-phone.jpg",
+      "thrive-opensrp-legacy-main.jpg",
+      "thrive-opensrp-legacy-phone.jpg",
+      "thrive-opensrp-tablet.jpg",
+      "thrive-opensrp-tablet-ui.jpg"
+    ]
   },
   "astra-lps-lab": {
     main: "astra-lps-02.jpg",
