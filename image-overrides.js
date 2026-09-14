@@ -10,7 +10,7 @@ const localProjectImages = {
   },
   "astra-lps-lab": {
     main: "astra-lps-02.jpg",
-    supporting: ["astra-lps-01.png", "astra-lps-04a.png", "astra-lps-05.jpg"]
+    supporting: ["astra-lps-05.jpg"]
   },
   "new-em-curriculum": { main: "new-curriculum-main.jpeg" },
   "internship-program": { main: "internship-main.jpg" },
