@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,7 +35,6 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           from PIL import Image, ImageOps
-          import os
 
           MAX_DIM = 1600
           TARGET_BYTES = 950_000
@@ -86,4 +87,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add '*.jpg' '*.jpeg'
           git commit -m 'Optimize portfolio images'
-          git push
+          git pull --rebase origin main
+          git push origin main
