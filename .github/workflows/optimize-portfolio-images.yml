@@ -34,7 +34,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          from PIL import Image, ImageOps
+          from PIL import Image, ImageOps, UnidentifiedImageError
 
           MAX_DIM = 1600
           TARGET_BYTES = 950_000
@@ -46,31 +46,36 @@ jobs:
 
           for path in paths:
               original_size = path.stat().st_size
-              with Image.open(path) as source:
-                  image = ImageOps.exif_transpose(source).convert('RGB')
-                  original_dimensions = image.size
-                  needs_resize = max(image.size) > MAX_DIM
-                  needs_compress = original_size > SIZE_TRIGGER
+              try:
+                  with Image.open(path) as source:
+                      image = ImageOps.exif_transpose(source).convert('RGB')
+              except (UnidentifiedImageError, OSError) as exc:
+                  print(f'Skipping unreadable image {path}: {exc}')
+                  continue
 
-                  if not needs_resize and not needs_compress:
-                      continue
+              original_dimensions = image.size
+              needs_resize = max(image.size) > MAX_DIM
+              needs_compress = original_size > SIZE_TRIGGER
 
-                  if needs_resize:
-                      image.thumbnail((MAX_DIM, MAX_DIM), Image.Resampling.LANCZOS)
+              if not needs_resize and not needs_compress:
+                  continue
 
-                  temp = path.with_suffix(path.suffix + '.tmp')
-                  best_size = None
-                  for quality in qualities:
-                      image.save(temp, format='JPEG', quality=quality, optimize=True, progressive=True)
-                      best_size = temp.stat().st_size
-                      if best_size <= TARGET_BYTES:
-                          break
+              if needs_resize:
+                  image.thumbnail((MAX_DIM, MAX_DIM), Image.Resampling.LANCZOS)
 
-                  if best_size is not None and best_size < original_size:
-                      temp.replace(path)
-                      changed.append((str(path), original_dimensions, image.size, original_size, best_size))
-                  else:
-                      temp.unlink(missing_ok=True)
+              temp = path.with_suffix(path.suffix + '.tmp')
+              best_size = None
+              for quality in qualities:
+                  image.save(temp, format='JPEG', quality=quality, optimize=True, progressive=True)
+                  best_size = temp.stat().st_size
+                  if best_size <= TARGET_BYTES:
+                      break
+
+              if best_size is not None and best_size < original_size:
+                  temp.replace(path)
+                  changed.append((str(path), original_dimensions, image.size, original_size, best_size))
+              else:
+                  temp.unlink(missing_ok=True)
 
           for path, old_dim, new_dim, old_size, new_size in changed:
               print(f'{path}: {old_dim} -> {new_dim}; {old_size/1024:.0f} KB -> {new_size/1024:.0f} KB')
