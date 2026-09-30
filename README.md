@@ -28,7 +28,7 @@ AI in Education repositories explore generative AI use, teacher and AI assessmen
 
 ## Background
 
-I hold a BEng in Informatics from Institut Teknologi Bandung and an MBA in International Business from THWS in Germany. My professional experience includes university teaching and academic program leadership, enterprise learning systems, digital health implementation, and AI model evaluation.
+I hold a BEng in Informatics from Institut Teknologi Bandung and an MBA in International Business from THWS in Germany. Since January 2025, I have worked as an Independent Learning Consultant. My professional experience also includes university teaching and academic program leadership, enterprise learning systems, digital health implementation, and AI model evaluation.
 
 ## Links
 
